@@ -3,14 +3,14 @@
 
 /*Asterisk wildcard selector to override default styles added by the browser*/
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 /*General styles*/
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ body{
 }
 
 /* Header */
-header{
+header {
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -33,12 +33,26 @@ header{
     align-items: baseline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 }
 
-h1{
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -47,7 +61,7 @@ h1{
 
 /* Navbar styles with dropdown toggle*/
 
-nav{
+nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -59,20 +73,20 @@ nav{
 }
 
 /* Nav Toggle*/
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
 
 /* Main */
-main{
+main {
     /*Make main element take up surplus space to push footer down*/
     flex: 1 0 auto;
     margin-top: 47px;
@@ -101,7 +115,7 @@ hr {
     margin: 5px 0;
 }
 
-#circle-cover-bg{
+#circle-cover-bg {
     background: url("../images/reasons-image.webp") no-repeat top center / cover;
     height: 90vh;
     width: 90vh;
@@ -112,14 +126,14 @@ hr {
     max-height: 300px;
 }
 
-#benefits-image{
-    display:flex;
+#benefits-image {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* Hero Section*/
-#hero{
+#hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
@@ -127,7 +141,7 @@ hr {
 
 
 /* Footer */
-#social-networks{
+#social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
@@ -143,64 +157,100 @@ hr {
 
 /* Media query: Tablets and larger (768px and up) */
 @media screen and (min-width:768px) {
+
     /*Header*/
-    nav{
+    nav {
         display: block;
         position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-    }    
+    }
 
-    #menu{
+    #menu {
         display: flex;
     }
 
-    #menu > li{
+    #menu>li {
         padding: 1rem;
     }
 
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: none;
     }
 
-    #logo{
+    #logo {
         font-size: 200%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
 
     /* Main content */
-    main{
+    main {
         /*Push main content down to accomaodate larger header*/
         margin-top: 79px;
     }
 
     /* Hero */
-    #cover-text{
+    #cover-text {
         width: 300px;
         right: 50px;
+    }
+
+    /*Reasons section*/
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental {
+        text-align: end;
+        align-self: flex-end;
     }
 }
 
 /* Media query: Laptops and larger (992px and up) */
 @media screen and (min-width:992px) {
+
     /* Hover */
-    #menu > a:hover {
+    #menu>a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
 
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;
-}
+/* Media query: Larger screens (1200px and up) */
+@media screen and (min-width:1200px) {
 
-#menu > li{
-    margin-bottom: 1em;
-}
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
 
-.active{
-    border-bottom: 1px solid #3a3a3a;
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefite-physical>div {
+        align-self: flex-start;
+    }
 }
