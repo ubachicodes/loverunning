@@ -166,7 +166,7 @@ main {
 
 /*Meetup times section*/
 #times{
-    background: url(../images/dublin-city.webp) no-repeat cente/center;
+    background: url('../images/dublin-city.webp') no-repeat cente/center;
     /*Handles responsivity without the need for a media query*/
     display: flex;
     flex-wrap: wrap;
