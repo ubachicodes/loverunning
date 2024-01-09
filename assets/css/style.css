@@ -213,8 +213,9 @@ main {
 
 #signup-form {
     color: #ffffff;
-    background-color: rgba(60, 60, 60, 0.6) no-repeat cover center center;
+    background-color: rgba(60, 60, 60, 0.6) no-repeat top center center/cover;
     padding: 30px;
+    padding-bottom: 10px;
 }
 
 
