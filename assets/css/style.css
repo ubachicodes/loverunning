@@ -165,9 +165,9 @@ main {
 }
 
 /*Meetup times section*/
-#times{
-    background: url('../images/dublin-city.webp') no-repeat cente/center;
-    /*Handles responsivity without the need for a media query*/
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
 }
@@ -188,6 +188,16 @@ main {
 #times h3{
     /*Override the heading color set in general styles*/
     color:#fafafa;
+}
+
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
 }
 
 /* Footer */
